@@ -1,0 +1,1 @@
+Carpeta para imágenes de apoyo de las páginas (capturas, fondos, etc.). Las figuras de los cuadernos se guardan en data/output/reportes/.

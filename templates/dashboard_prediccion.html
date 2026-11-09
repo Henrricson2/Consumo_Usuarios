@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Predicción de Consumo · Dashboard</title>
+<link rel="icon" href="../static/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body data-pagina="prediccion">
+<header class="cabecera">
+  <div class="cab-izq">
+    <img class="marca" src="../static/assets/logo/logo.svg" alt="">
+    <div>
+      <p class="sobretitulo">Electrohuila · Usuarios especiales (no regulados)</p>
+      <h1>Predicción del consumo de energía</h1>
+    </div>
+  </div>
+  <dl class="cab-meta" id="cab-meta"></dl>
+</header>
+<nav class="pestanas" role="tablist" aria-label="Secciones de la predicción">
+  <button role="tab" id="t-global" aria-controls="tab-global" data-tab="global"><span class="t-num">1</span> Predicción global</button>
+  <button role="tab" id="t-usuarios" aria-controls="tab-usuarios" data-tab="usuarios"><span class="t-num">2</span> Predicción por usuario</button>
+  <button role="tab" id="t-cuentas" aria-controls="tab-cuentas" data-tab="cuentas"><span class="t-num">3</span> Predicción por cuenta</button>
+</nav>
+<main>
+  <section class="panel" id="tab-global" role="tabpanel" aria-labelledby="t-global" hidden>
+    <div class="filtros" data-tab="pronostico"></div><div class="kpis" id="k-pronostico"></div><div class="rejilla" id="g-pronostico"></div>
+    <h2 class="seccion">¿Qué modelo resultó mejor? <small>Comparación de los 7 modelos para el consumo total</small></h2>
+    <div class="filtros" data-tab="modelos"></div><div class="kpis" id="k-modelos"></div><div class="rejilla" id="g-modelos"></div>
+  </section>
+  <section class="panel" id="tab-usuarios" role="tabpanel" aria-labelledby="t-usuarios" hidden>
+    <div class="filtros" data-tab="usuarios"></div><div class="kpis" id="k-usuarios"></div><div class="rejilla" id="g-usuarios"></div>
+  </section>
+  <section class="panel" id="tab-cuentas" role="tabpanel" aria-labelledby="t-cuentas" hidden>
+    <div class="filtros" data-tab="cuentas"></div><div class="kpis" id="k-cuentas"></div><div class="rejilla" id="g-cuentas"></div>
+  </section>
+</main>
+<footer class="pie" id="pie"></footer>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<script src="../static/js/vendor/plotly.min.js"></script>
+<script>window.Plotly || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js"><\/script>');</script>
+<script src="../static/js/data.js"></script>
+<script src="../static/js/charts.js"></script>
+<script src="../static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consumo Usuarios Especiales</title>
+<meta name="description" content="Análisis exploratorio y predicción del consumo de energía de los usuarios especiales.">
+<link rel="icon" href="../static/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body class="inicio" data-pagina="inicio">
+<header class="cabecera">
+  <div class="cab-izq">
+    <img class="marca" src="../static/assets/logo/logo.svg" alt="">
+    <div>
+      <p class="sobretitulo">Electrohuila · Usuarios especiales (no regulados)</p>
+      <h1>Consumo de energía: análisis y predicción</h1>
+    </div>
+  </div>
+  <nav class="acciones" aria-label="Accesos directos">
+    <a id="abrir-actual" href="dashboard_analisis_exploratorio.html" target="_blank" rel="noopener">Abrir en pestaña nueva ↗</a>
+    <a href="../data/output/predicciones.xlsx" download>Predicciones (.xlsx)</a>
+    <a href="../data/output/indicadores.xlsx" download>Indicadores (.xlsx)</a>
+  </nav>
+</header>
+<nav class="pestanas" role="tablist" aria-label="Secciones">
+  <button role="tab" id="t-exploratorio" aria-controls="tab-exploratorio" data-tab="exploratorio"><span class="t-num">1</span> Análisis exploratorio</button>
+  <button role="tab" id="t-prediccion" aria-controls="tab-prediccion" data-tab="prediccion"><span class="t-num">2</span> Predicción</button>
+</nav>
+<div class="marco">
+  <section id="tab-exploratorio" role="tabpanel" aria-labelledby="t-exploratorio" hidden></section>
+  <section id="tab-prediccion" role="tabpanel" aria-labelledby="t-prediccion" hidden></section>
+  <iframe id="f-exploratorio" title="Dashboard de análisis exploratorio" data-src="dashboard_analisis_exploratorio.html" hidden></iframe>
+  <iframe id="f-prediccion" title="Dashboard de predicción" data-src="dashboard_prediccion.html" hidden></iframe>
+</div>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<script src="../static/js/charts.js"></script>
+<script src="../static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# ---------------------------------------------------------------
+# Archivos que Git no debe subir al repositorio
+# ---------------------------------------------------------------
+
+# Entorno virtual de Python (se recrea con: pip install -r requirements.txt)
+.venv/
+venv/
+env/
+
+# Archivos temporales de Python y Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Configuración local del editor y del sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
